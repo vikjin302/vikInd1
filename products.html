@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page - Super Gadget</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom Animation for Fade-In */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .animate-fade-in-delay {
+      animation: fadeIn 1s ease-in-out 0.5s;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+        </a>
+        <div class="flex md:order-2">
+          <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            </svg>
+            <span class="sr-only">Search</span>
+          </button>
+          <div class="relative hidden md:block">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+              </svg>
+              <span class="sr-only">Search icon</span>
+            </div>
+            <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+          </div>
+          <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+          </button>
+        </div>
+          <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+            <div class="relative mt-3 md:hidden">
+              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                </svg>
+              </div>
+              <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+            </div>
+            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li>
+                <a href="index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About Us</a>
+              </li>
+              <li>
+                <a href="products.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent blomd:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Products</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-tansparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:bover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<main class="container mx-auto py-16 text-center">
+  <!-- Product Page Header -->
+  <h2 class="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+    Product: 10mm Preform
+  </h2>
+  <p class="text-lg text-gray-700 mb-6 opacity-0 animate-fade-in-delay">
+    Explore our latest Super Gadget that offers exceptional features.
+  </p>
+
+  <!-- Tabs Section -->
+  <div class="tabs-container">
+    <!-- Tab Links -->
+    <div class="flex justify-center mb-4">
+      <button class="tab-btn px-6 py-2 mx-2 rounded-t-lg bg-blue-600 text-white hover:bg-blue-500 focus:outline-none transition duration-300">Overview</button>
+      <button class="tab-btn px-6 py-2 mx-2 rounded-t-lg bg-blue-600 text-white hover:bg-blue-500 focus:outline-none transition duration-300">Features</button>
+      <button class="tab-btn px-6 py-2 mx-2 rounded-t-lg bg-blue-600 text-white hover:bg-blue-500 focus:outline-none transition duration-300">Gallery</button>
+      <button class="tab-btn px-6 py-2 mx-2 rounded-t-lg bg-blue-600 text-white hover:bg-blue-500 focus:outline-none transition duration-300">Reviews</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+      <!-- Overview Tab -->
+      <div class="tab-pane hidden">
+        <h3 class="text-3xl font-semibold mb-4">Product Overview</h3>
+        <p class="text-lg text-gray-700 mb-4">
+          The Super Gadget is the ultimate device for tech enthusiasts. With cutting-edge features and a sleek design, it offers unmatched performance and style.
+        </p>
+    
+        <img src="C:\Users\Vikrant Jindal\Downloads\10mmPreformTrail.jpg" alt="Overview Image" class="w-full max-w-lg mx-auto rounded-md shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out">
+        <div class="mt-6">
+          <a href="product_page_link.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-500 transition-transform duration-300 hover:scale-105">
+            View Full Product Details
+          </a>
+        </div>
+      </div>
+
+      <!-- Features Tab -->
+      <div class="tab-pane hidden">
+        <h3 class="text-3xl font-semibold mb-4">Features</h3>
+        <ul class="text-lg text-gray-700 space-y-2">
+          <li>Feature 1: Incredible performance with the latest chipset.</li>
+          <li>Feature 2: Ultra-long battery life with fast charging.</li>
+          <li>Feature 3: Seamless connectivity with 5G support.</li>
+          <li>Feature 4: High-quality display for immersive experience.</li>
+        </ul>
+        <img src="https://via.placeholder.com/600x400" alt="Features Image" class="w-full max-w-lg mx-auto rounded-md shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out">
+      </div>
+
+      <!-- Gallery Tab -->
+      <div class="tab-pane hidden">
+        <h3 class="text-3xl font-semibold mb-4">Product Gallery</h3>
+        <div class="flex justify-center space-x-4">
+          <img src="https://via.placeholder.com/200" alt="Image 1" class="w-1/3 max-w-xs rounded-md shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out">
+          <img src="https://via.placeholder.com/200" alt="Image 2" class="w-1/3 max-w-xs rounded-md shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out">
+          <img src="https://via.placeholder.com/200" alt="Image 3" class="w-1/3 max-w-xs rounded-md shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out">
+        </div>
+      </div>
+
+      <!-- Reviews Tab -->
+      <div class="tab-pane hidden">
+        <h3 class="text-3xl font-semibold mb-4">Customer Reviews</h3>
+        <div class="space-y-4">
+          <div class="review">
+            <p class="text-lg text-gray-700">"The Super Gadget has completely transformed my daily routine. It's fast, reliable, and easy to use!" - John D.</p>
+          </div>
+          <div class="review">
+            <p class="text-lg text-gray-700">"Excellent value for money. I'm amazed by the battery life and screen quality." - Sarah W.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- JavaScript for Tabs -->
+<script>
+  // Select all tab buttons
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabPanes = document.querySelectorAll('.tab-pane');
+
+  // Add event listeners to each tab button
+  tabBtns.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      // Remove active class from all tabs and panes
+      tabBtns.forEach((btn) => btn.classList.remove('bg-blue-700'));
+      tabPanes.forEach((pane) => pane.classList.add('hidden'));
+
+      // Add active class to clicked tab and display corresponding pane
+      btn.classList.add('bg-blue-700');
+      tabPanes[index].classList.remove('hidden');
+    });
+  });
+
+  // Set default active tab
+  tabBtns[0].classList.add('bg-blue-700');
+  tabPanes[0].classList.remove('hidden');
+</script>
+
+</body>
+</html>
